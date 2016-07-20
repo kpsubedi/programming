@@ -1,0 +1,50 @@
+1. Difference Between String, StringBuffer, StringBuilder
+==> (Storage Area, Modifiable, Thread Safe, Performance)
+String: Constant String Pool, No (immutable), Yes, Fast
+StringBuffer: Heap, Yes (Mutable), Yes, Very Slow
+StringBuilder: Heap, Yes (Mutable), No, Fast
+
+Note: Thread Safe data structures are slow
+
+2. Difference between ArrayList and Vector.
+
+ArrayList==> not synchronized, fast, increases its size by 50% 
+doesnot define the increment size, Enumeration and Iterator.
+
+Vector==> synchronized, slow, double the size, define increment size, Iterator.
+
+3. Synchronized: this keyword to the method, we force every thread to wait for 
+its turn before it can enter the method.
+
+4. Iterators and Enumerators
+
+Iterators==> Allow to remove elements from the underlying collection:
+remove()
+
+E.g. List<String> linkList = new LinkedList<String>();
+linkList.add("Sample1");
+linkList.add("Sample2");
+linkList.add("Sample3");
+linkList.add("Sample4");
+linkList.add("Sample5");
+linkList.add("Sample6");
+
+Iterator<String> iterList = linkList.iterator();
+
+while(iterList.hasNext()){
+    if(((String)iterList.next()).equals("Sample1")){
+	iterList.remove();
+	}
+    }
+
+Enumerator==> Doesn't allow element to remove.
+
+Enumeration<String> enumList = Collections.enumeration(linkList);
+
+while(enumList.hasMoreElements()){
+	System.out.println("...");
+	}
+
+
+
+
