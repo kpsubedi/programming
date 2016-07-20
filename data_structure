@@ -105,7 +105,18 @@ public static JavaDemoSingleton getInstance(){
 }
 }
 
-	
+7. Write code to find first repeated character in the String?
+===>
+Logic: As we know a repeated character occurs more atleast twice in the string.
 
+a. First create the character cound hash table.
+    For each character
+        if there is no value stored in the character set it to 1.
+        else increment the value of the character by 1
+b. Scan the given string
+    for each character
+         return character if the count in hash table is greater than 1.
+         if character have count 1, return null	
 
+8. 
 
