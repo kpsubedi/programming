@@ -44,7 +44,68 @@ Enumeration<String> enumList = Collections.enumeration(linkList);
 while(enumList.hasMoreElements()){
 	System.out.println("...");
 	}
+5. Write code to find first non-repeated character in the String?
+===>
+Logic: As we know a non-repeated character occurs only once in the string.
 
+a. First create the character cound hash table.
+    For each character 
+        if there is no value stored in the character set it to 1.
+        else increment the value of the character by 1
+b. Scan the given string
+    for each character 
+         return character if the count in hash table is 1.
+         if no character have count 1, return null
+
+6. What is singleton? Is it better to make whole method synchronized or only critical section synchronized?
+===>
+Singleton class with just one instance in whole Java application. java.lang.Runtime() is singleton class.
+Singleton class JavaDemo. It means only one and only one instance of JavaDemo class we can have at and 
+point of execution in the application code. 
+a. We would create a static variable so that it can hold one single instance of our class.
+E.g. private static JavaDemoSingleton uniqueInstnace;
+
+b. We should declare the constructor private so that only class itself can instantiate the object.
+Outside classes willnot be able to see the class constructor.
+
+private JavaDemoSingleton(){...}
+
+c. Then the main work to write the method which returns the instance of class, let the name of the method be 
+getInstance()
+
+public class JavaDemoSingleton {
+    private static JavaDemoSingleton uniqueInstance;
+
+private JavaDemoSingleton(){...}
+
+public static synchronized JavaDemoSingleton getInstance(){
+	if(uniqueInstance == null){
+		uniqueInstance = new JavaDemoSingleton();
+		}
+	return uniqueInstance;
+    }
+}
+
+** Lazy Initialization 
+** Early Initialization
+
+public class JavaDemoSingleton {
+    private static volatile JavaDemoSingleton uniqueInstance;
+
+private JavaDemoSingleton(){...}
+
+public static JavaDemoSingleton getInstance(){
+    if(uniqueInstance == null){
+        synchronized(JavaDemoSingleton.class){
+		if(uniqueInstance==null){
+			uniqueInstance = new JavaDemoSingleton();
+		}
+	}
+    }
+}
+}
+
+	
 
 
 
