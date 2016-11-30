@@ -8,6 +8,9 @@ https://github.com/kriskowal/q
 https://nodejs.org/api/cluster.html
 https://github.com/Unitech/pm2
 http://passportjs.org/docs : Authentication
+https://www.npmjs.com/package/http-intercept
+https://davidwalsh.name/nock
+http://www.codingdefined.com/2016/01/how-to-intercept-http-requests-in-nodejs.html
 
 [EXPRESSJS]
 https://github.com/expressjs/multer
