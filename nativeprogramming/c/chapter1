@@ -1,3 +1,68 @@
 System call
 ***********
+#include <unistd.h>
+
+ssize_t write(int fd, const void *buf, size_t count);
+
+***********
+Example:
+
+int main() {
+    write(1, "Welcome", 7);
+    return 0;
+}
+
+ramming/c$ gcc ch1.c 
+ch1.c: In function ‘main’:
+ch1.c:2:5: warning: implicit declaration of function ‘write’ [-Wimplicit-function-declaration]
+     write(1, "Welcome", 7);
+     ^
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ ls
+a.out  ch1.c  chapter1
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ ./a.out 
+Welcomenull@null-VirtualBox:~/Documents/git_resource/programming/programming/natramming/c$ 
+
+We can see from above output after compiling, the compiler (e.g.,gcc) warns 
+write was not declared before using it.
+
+
+We could declare
+----------------
+
+int write(int, void *, int); //Decleration of write
+
+int main(){
+    write(1, "Welcome", 7);
+    return 0;
+}
+ramming/c$ gcc ch2.c 
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ ls
+a.out  ch1.c  ch2.c  chapter1
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ ./a.out 
+Welcomenull@null-VirtualBox:~/Documents/git_resource/programming/programming/natramming/c$ 
+
+The decleration of write is already included inside an exisitng file 
+which we get free from unistd.h header file.
+
+#include <unistd.h> : Let's tell the preprocessor to read in the contents
+of the file go in and find a file named unistd.h and include all the text
+that is in that file.
+
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ cat ch3.c 
+#include <unistd.h>
+
+int main(){
+    write(1, "Welcome", 7);
+    return 0;
+}
+
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ gcc ch3.c -o ch3
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ ./ch3 
+Welcomenull@null-VirtualBox:~/Documents/git_resource/programming/programming/natramming/c$ 
+
+
+
+
+
+
 
