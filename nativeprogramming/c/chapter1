@@ -60,6 +60,20 @@ null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprog
 null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ ./ch3 
 Welcomenull@null-VirtualBox:~/Documents/git_resource/programming/programming/natramming/c$ 
 
+Lets print "Welcome" in new line using following example.
+
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ cat ch4.c 
+#include <unistd.h>
+
+int main(){
+    write(1, "Welcome\n", 8);
+    return 0;
+}
+
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ gcc ch4.c -o ch4
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ ./ch4
+Welcome
+null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ 
 
 
 
