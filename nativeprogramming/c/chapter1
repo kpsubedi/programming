@@ -73,9 +73,19 @@ int main(){
 null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ gcc ch4.c -o ch4
 null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ ./ch4
 Welcome
-null@null-VirtualBox:~/Documents/git_resource/programming/programming/nativeprogramming/c$ 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+File Descriptor (fd):
+---------------
+fd: 1 --> regular outpur, standard output
+    2 --> for error messages
 
+In C, there is no boolean data type, Instead, if we have got an integer value 
+which is non-zero, that is treated as 'true' value.
 
+non-zero ---> 'true'
+zero     ---> 'false'
+
+ 
 
 
 
