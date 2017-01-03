@@ -1,0 +1,26 @@
+{
+    "App": {
+	"restApiEndpoint": {
+	    "version1ContactPath": "/v1/contact",
+	    "version2ContactPath": "/v2/contact"	    
+            },
+        "webServer": {
+            "protocol": "http",
+	    "host": "localhost",
+	    "port": 3000
+	    },
+	    "isCluster": false
+        },
+    "MySQL": {
+	"host": "localhost",
+	"user": "<username>",
+	"password": "<use yours>",
+	"database": "contactdb"
+	},
+    "MongoDB": {
+	"connectionString": "mongodb://localhost/contactdb"
+	}
+}
+
+
+
