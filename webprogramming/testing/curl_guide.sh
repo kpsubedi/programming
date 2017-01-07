@@ -132,3 +132,32 @@ Date: Fri, 06 Jan 2017 18:36:29 GMT
 Connection: keep-alive
 
 Record does not exist!!!
+
+===
+$ curl -v -i  http://localhost:8000/v1/contact/1 
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8000 (#0)
+> GET /v1/contact/1 HTTP/1.1
+> Host: localhost:8000
+> User-Agent: curl/7.47.0
+> Accept: */*
+> 
+< HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+< X-Powered-By: Express
+X-Powered-By: Express
+< Content-Type: text/html; charset=utf-8
+Content-Type: text/html; charset=utf-8
+< Content-Length: 24
+Content-Length: 24
+< ETag: W/"18-Q5tydbjbTHu2yhJ6il7GbQ"
+ETag: W/"18-Q5tydbjbTHu2yhJ6il7GbQ"
+< Date: Fri, 06 Jan 2017 19:04:59 GMT
+Date: Fri, 06 Jan 2017 19:04:59 GMT
+< Connection: keep-alive
+Connection: keep-alive
+
+< 
+* Connection #0 to host localhost left intact
+Record does not exist!!!
+===
