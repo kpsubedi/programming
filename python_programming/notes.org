@@ -1,0 +1,32 @@
+Python
+======
+
+1. Stringly typed language
+
+>>> x = [3,5,6]
+>>> type(x)
+
+
+>>> y = "Sample"
+>>> type(y)
+
+
+>>> z = 45.9
+>>> type(z)
+
+
+2. dynamically typed vs statically typed
+
+- No prior checking type before running 
+
+
+3. Python byte code
+
+>>> import dis
+
+>>> def say_hi():
+        print("Welcome to Python\n")
+
+>>> dis.dis(say_hi)
+
+
