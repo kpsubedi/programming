@@ -27,7 +27,7 @@ void main()
 
     struct inotify_event *event;
 
-    char warchednamed[100][NAME_MAX+1];
+    char watchednames[100][NAME_MAX+1];
 
     notifyfd = inotify_init();
 
@@ -43,7 +43,7 @@ void main()
 	/*Get rid of the newlline */
         watchname[strlen(watchname)-1] = '\0';
 
-	if(state(watchname, &sb) < 0){
+	if(stat(watchname, &sb) < 0){
 	    printf("Cannot stat %s, ignored\n", watchname);
 	    continue;
 	}
@@ -75,8 +75,8 @@ void main()
 	    event = (struct inotify_event *)p;
 	    p += sizeof(struct inotify_event) + event->len;
 	    /*Display the event*/
-	    if (event->mask & IN_MODIFY) fprintf(fileout, "%s was modified\n", watchednames[event->watchfd]);
-	    if (event->mask & IN_DELETE_SELF) fprintf(fout, "%s was deleted\n", watchednames[event->watchfd]);	
+	    if (event->mask & IN_MODIFY) fprintf(fileout, "%s was modified\n", watchednames[event->wd]);
+	    if (event->mask & IN_DELETE_SELF) fprintf(fileout, "%s was deleted\n", watchednames[event->wd]);	
 	    fflush(fileout);
 	}
     }
