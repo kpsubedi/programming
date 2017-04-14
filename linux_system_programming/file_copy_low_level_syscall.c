@@ -17,7 +17,7 @@ void main()
 	exit(2);
     }
 
-    while ((count = read(fdin, buff, BSIZE)) > 0)
+    while ((count = read(fdin, buff, BUFFSIZE)) > 0)
 	write(fdout, buff, count);
 
     close(fdin);
