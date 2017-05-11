@@ -41,4 +41,9 @@ new jars.
 
 E.g., $JAVA_HOME=/opt/java/jdk1.6.0_113
 
+It is always good practice to find all files inside 
+$JAVA_HOME/jre/lib/security/ directory. 
+These files play critical role in security. 
+blacklist, blacklisted.certs, cacerts, java.policy, java.security, javaws.policy, local_policy.jar, trusted.libraries, US_export_policy.jar.
+
 
