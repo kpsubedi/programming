@@ -1,1 +1,44 @@
-java cryptogr
+java cryptogrphy default key length testing:
+===========================================
+http://stackoverflow.com/questions/6481627/java-security-illegal-key-size-or-default-parameters
+
+Example:
+
+import java.security.NoSuchAlgorithmException;
+
+import javax.crypto.Cipher;
+
+public class TestCryptoDefaultKeySize {
+    public static void main(String[] args) throws NoSuchAlgorithmException{
+	System.out.println("Testing Default Key Length: ");
+	int maxKeyLenAES = Cipher.getMaxAllowedKeyLength("AES");
+	int maxKeyLenDES = Cipher.getMaxAllowedKeyLength("DES");
+	System.out.println("Default Key Size of AES: " + maxKeyLenAES);
+	System.out.println("Default Key Size of DES: " + maxKeyLenDES);
+    }
+}
+
+
+The solution for such issue is to download the cryptographic extension from 
+Oracle web site.
+http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
+
+And download the zip file and unzip. There will be two jars: local_policy.jar
+and US_export_policy.jar. 
+
+Make a backup of previous jar from $JAVA_HOME/jre/lib/security/ and place these
+new jars.
+
+The solution for such issue is to download the cryptographic extension from 
+Oracle web site.
+http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
+
+And download the zip file and unzip. There will be two jars: local_policy.jar
+and US_export_policy.jar. 
+
+Make a backup of previous jar from $JAVA_HOME/jre/lib/security/ and place these
+new jars.
+
+E.g., $JAVA_HOME=/opt/java/jdk1.6.0_113
+
+
