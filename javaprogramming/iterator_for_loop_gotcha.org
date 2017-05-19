@@ -1,0 +1,69 @@
+Note:
+   If you want to loop over the collection use for loop.
+   If you want to modify in the collection use the iterator.
+
+Example:
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.ArrayList;
+
+
+public class CollectionExample{
+    public static void main(String[] args){
+        Student stud1 = new Student("Eric Willium", 67);
+        Student stud2 = new Student("Jhon MaCkliin", 50);
+        Student stud3 = new Student("Bob Humphrys", 78);
+
+        Collection<Student> students = new ArrayList<>();
+        students.add(stud1);
+        students.add(stud2);
+        students.add(stud3);
+	
+	for (Student s: students){
+	    if (s.getWeight() > 55){
+		System.out.println(s);
+	    } else {
+		students.remove(s);
+	    }
+	}
+	System.out.println(students);
+    }
+}
+
+
+The above code seems fine. But it will throw an exception i.e. java.util.ConcurrentModificationException. 
+We are trying to access the collection as well as modifying same time. 
+
+We need to use iterator in such situation.
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.ArrayList;
+
+
+public class CollectionExample{
+    public static void main(String[] args){
+        Student stud1 = new Student("Eric Willium", 67);
+        Student stud2 = new Student("Jhon MaCkliin", 50);
+        Student stud3 = new Student("Bob Humphrys", 78);
+
+        Collection<Student> students = new ArrayList<>();
+        students.add(stud1);
+        students.add(stud2);
+        students.add(stud3);
+	
+	final Iterator<Student> studentIterator = students.iterator();
+	while(studentIterator.hasNext()){
+	    Student s = studentIterator.next();
+	    if (s.getWeight() > 55){
+		System.out.println(s);
+	    } else {
+		students.remove(s);
+	    }
+	}	
+	System.out.println(students);
+    }
+}
+ 
+
