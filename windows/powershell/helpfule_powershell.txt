@@ -1,0 +1,7 @@
+
+To get the version
+
+PS C:\> $PSVersionTable.PSVersion
+
+PS c:\> Get-Host
+
