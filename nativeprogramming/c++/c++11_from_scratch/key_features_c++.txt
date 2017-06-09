@@ -1,0 +1,31 @@
+Efficient Abstractions
+
+Direct Mapping to the Hardware
+
+Grphics and CAD 
+
+Embedded System 
+
+TensorFlow: in C++
+
+C++ Compiler
+
+First C++ Program: <<Hello, World!>>
+
+Preprocessor and Linker
+
+Software is executed by the CPU
+
+The CPU "speaks" machine language
+
+Translator: C++ Compiler
+
+
+
+High-quality C++ Compilers
+
+1. GCC  
+2. Clang/LLVM
+
+
+
