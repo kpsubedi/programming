@@ -40,3 +40,59 @@ PYQT => Cross-platform Desktop Applications
 Basics of Python
 ----------------
 built-in data types, functions, classes 
+
+Python Enhancement Proposals (PEPS)
+-----------------------------------
+PEP8: guiding principle as to how you should write your code to make it more 
+readable.
+
+
+Python 2 vs Python 3
+--------------------
+
+
+- Developed by Guido van Rossum in the late 1980s in the Netherland.
+
+Python Implementations
+----------------------
+
+CPython    C programming     native
+Jython     Java               JVM
+IronPython  C#                .NET
+pypy        RPython          native and others
+
+Python Release Timeline
+-----------------------
+2.6   2.7 
+3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 
+
+
+Battries Included
+ - Python Standard Library
+ 
+ >>> import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+>>>
+
+
+
