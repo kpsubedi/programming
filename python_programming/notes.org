@@ -30,3 +30,13 @@ Python
 >>> dis.dis(say_hi)
 
 
+===Introduction to Python===
+
+DJANGO => Web Development
+TENSORFLOW => Artificial Intelligence
+SCIPY => Scientific Computations
+PYQT => Cross-platform Desktop Applications
+
+Basics of Python
+----------------
+built-in data types, functions, classes 
