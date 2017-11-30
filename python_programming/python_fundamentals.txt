@@ -101,3 +101,34 @@ NoneType => the null object
 bool => boolean logical values
 {True, False}
 
+int
+---
+unlimited precision signed integer
+>>> 10
+10
+>>> 0b10
+2
+>>> 0o10
+8
+>>> 0x10
+16
+>>> int(3.5)
+3
+Note: Rounding is always towards zero.
+>>> int(-3.6)
+-3
+>>> int("725")
+725
+>>> int("10000", 3)
+81
+81 is in decimal.
+
+float
+-----
+IEEE-754 double precision (64-bit).
+53 bits of binary precision.
+15 to 16 bits of decimal precision.
+
+
+
+
