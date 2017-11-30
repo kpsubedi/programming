@@ -1,2 +1,35 @@
 Python Fundamentals
 ===================
+REPL (Read-Eval-Print-Loop)
+
+>>> REPL
+
+>>> _ 
+15
+Recently printed value
+
+>>> _ + 5
+20
+
+The above useful trick only works in REPL.
+
+>>> print("Welcome to Python 3")
+Welcome to Python 3
+
+Python 3, print is a function call.
+
+>>> for i in range(10):
+...     x = i + 10
+...     print(x)
+... 
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+>>>
