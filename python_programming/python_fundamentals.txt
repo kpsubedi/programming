@@ -172,7 +172,30 @@ bool
 ----
 Boolean logical value. 
 Either True or False.
+The bool type represents logical states and plays an important role in several of Python's control flow 
+structures.
 
+>>> True
+True
+>>> False
+False
+
+For integers, zero is considered falsey and all other values are truthy.
+>>> bool(0)
+False
+>>> bool(12)
+True
+>>> bool(-1)
+True
+>>> 
+
+Same behavior with float. 
+>>> bool(0.0)
+False
+>>> bool(1.2)
+True
+>>> bool(-1.2)
+True
 
 
 
