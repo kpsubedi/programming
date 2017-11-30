@@ -57,6 +57,32 @@ import ctypes
 Type help() for interactive help, or help(object) for help about object.
 >>> help(math)
 
+>>> help(math.factorial)
+factorial(...)
+    factorial(x) -> Integral
+    
+    Find x!. Raise a ValueError if x is negative or non-integral.
+    
+    
+>>> math.factorial(10)
+3628800
+
+This function takes integer as an input and return integer as output.
+
+>>> n = 10
+>>> k = 7
+>>> math.factorial(n) / (math.factorial(k) * math.factorial(n-k))
+120.0
+
+>>> from math import factorial 
+>>> factorial(n) / (factorial(k) * factorial(n-k))
+120.0
+
+>>> from math import factorial as fac
+>>> fac(n) / (fac(k) * fac(n-k))
+120.0
+
+
 
 
 
