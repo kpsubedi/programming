@@ -206,4 +206,37 @@ False
 True
 >>>
 
+>>> bool("")
+False
+>>> bool("Spam")
+True
+>>>
+
+In particular, we cannot use the bool constructor to convert from string representations of
+True and False.
+
+>>> bool("False")
+True
+>>> bool("True")
+True
+>>>
+
+Note: because string "False" is not empty string.
+
+
+Python Relational Operators
+===========================
+
+== value equality / equivalence 
+!= value inequality / inequivalence 
+< less-than
+> greater-than
+<= less-than or equal to
+>= greater-than or equal to
+
+Bool values are commonly produced by Python's relational operators, which can be used for comparing objects. 
+These include value equality or equivalence, value inequality or inequivalence, less-than, greater-than, 
+less-than or equal to and greater-than or equal to.
+
+
 
