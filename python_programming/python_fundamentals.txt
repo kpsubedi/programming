@@ -48,4 +48,15 @@ Python Standard Library
 E.g. import <module_name>
 import ctypes
 
+>>> import math
+>>> math.sqrt(49)
+7.0
+>>> 
+
+>>> help
+Type help() for interactive help, or help(object) for help about object.
+>>> help(math)
+
+
+
 
