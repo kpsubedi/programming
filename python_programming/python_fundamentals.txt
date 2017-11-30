@@ -94,4 +94,10 @@ This function takes integer as an input and return integer as output.
 
 Scalar types and values
 -----------------------
+int => arbitrary precision integer
+float => 64-bit floating point numbers
+NoneType => the null object
+{None}
+bool => boolean logical values
+{True, False}
 
