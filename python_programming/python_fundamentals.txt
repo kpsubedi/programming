@@ -197,5 +197,13 @@ True
 >>> bool(-1.2)
 True
 
+when converting from collections, such as strings or lists, only empty collections are treated as 
+falsey.
+
+>>> bool([])
+False
+>>> bool([1,'a'])
+True
+>>>
 
 
