@@ -38,3 +38,14 @@ Python 3, print is a function call.
 PEP: 8
 ======
 Style Guide for Python Code
+
+Python Standard Library
+=======================
+- Extensive standard library.
+- The standard library is structured as modules.
+
+- Gain access of these standard library is using import.
+E.g. import <module_name>
+import ctypes
+
+
