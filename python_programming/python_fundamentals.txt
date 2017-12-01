@@ -397,4 +397,23 @@ print("Go here on break")
 
 The break keyword terminates the innermost loop, transferring execution to the first statement after the loop.
 
+>>> while True:
+...     user_input = input()
+...     if int(user_input) % 5 == 0:
+...         break
+... 
+12
+23
+25
+>>>
+
+Break terminates the innermost loop, in this case the while loop, and causes execution to jump to the 
+first statement after the loop or in our case, the end of the program. 
+
+Importing Python Standard Library modules:
+=========================================
+import module
+from module import function
+from module import function as alias
+
 
