@@ -238,5 +238,16 @@ Bool values are commonly produced by Python's relational operators, which can be
 These include value equality or equivalence, value inequality or inequivalence, less-than, greater-than, 
 less-than or equal to and greater-than or equal to.
 
+>>> x = 20
+>>> x == 20
+True
+>>> x == 10
+False
+>>> x != 20
+False
+>>> x != 13
+True
+>>>
+
 
 
