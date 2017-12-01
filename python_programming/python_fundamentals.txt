@@ -295,5 +295,42 @@ if expression:
     print("expression is True")
 else:
     print("expression is False")
-    
-    
+ Example:
+ --------
+ >>> c = 54
+>>> if c > 60:
+...     print("Greater than 60")
+... else:
+...     print("60 or smaller")
+... 
+60 or smaller
+>>>
+
+>>> if c > 60:
+...     print("Greater than 60")
+... else:
+...     if c < 20:
+...         print("Less than 20")
+...     else:
+...         print("Between 20 and 60")
+... 
+Between 20 and 60
+>>>
+
+Python provides the elif keyword to eliminate the need for nested if ... else structures in many 
+cases.
+
+>>> if c > 60:
+...     print("Greater than 60")
+... elif c < 20:
+...     print("Less than 20")
+... else:
+...     print("Between 20 and 50")
+... 
+Between 20 and 50
+>>>
+
+Zen of Python
+-------------
+Flat is better than nested.
+
