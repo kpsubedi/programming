@@ -270,8 +270,22 @@ Note: expression is converted to bool as if by the bool() constructor
 ... 
 It's True!
 
+>>> if False:
+...     print("It's False!")
+... 
+>>> 
+
+>>> if bool("eggs"):
+...     print("I like egg!")
+... 
+I like egg!
+
+The above expression is exactly same as below:
+
+>>> if "eggs":
+...     print("I like egg!")
+... 
+I like egg!
+
 
     
-
-
-
