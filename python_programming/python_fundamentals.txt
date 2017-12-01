@@ -287,5 +287,13 @@ The above expression is exactly same as below:
 ... 
 I like egg!
 
+Thanks to this useful shorthand, explicit conversion to bool using the bool constructor is rarely seen in 
+Python. 
 
+
+if expression:
+    print("expression is True")
+else:
+    print("expression is False")
+    
     
