@@ -247,7 +247,31 @@ False
 False
 >>> x != 13
 True
->>>
+>>> x < 30
+True
+>>> x > 30
+False
+>>> x <=20 
+True
+>>> x >= 20
+True
+
+
+Conditional Statements
+----------------------
+
+if expression:
+    print("expression is True")
+    
+Note: expression is converted to bool as if by the bool() constructor 
+
+>>> if True:
+...     print("It's True!")
+... 
+It's True!
+
+
+    
 
 
 
