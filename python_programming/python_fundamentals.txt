@@ -416,4 +416,13 @@ import module
 from module import function
 from module import function as alias
 
+Collections
+===========
+str
+bytes
+list
+dict
 
+str
+---
+immutable sequences 
