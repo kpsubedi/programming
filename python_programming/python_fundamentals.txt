@@ -425,4 +425,28 @@ dict
 
 str
 ---
-immutable sequences 
+immutable sequences of Unicode codepoints
+- meaning that once you have constructed a string you can't modify its contents.
+
+String Literals
+---------------
+Literal strings in Python are delimited by quotes. You can use single quotes or double quotes.
+"This is a String"
+'This is also a String'
+
+>>> "test'
+  File "<stdin>", line 1
+    "test'
+         ^
+SyntaxError: EOL while scanning string literal
+>>>
+
+>>> "It's a very nice course"
+"It's a very nice course"
+>>>
+>>> '"Yes!", you told, "He agrees!"'
+'"Yes!", you told, "He agrees!"'
+>>>
+
+
+
