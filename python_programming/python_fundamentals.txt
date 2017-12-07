@@ -448,5 +448,35 @@ SyntaxError: EOL while scanning string literal
 '"Yes!", you told, "He agrees!"'
 >>>
 
+>>> "Hello" "From"
+'HelloFrom'
+>>>
+
+Strings with Newlines
+---------------------
+1. Multiline strings
+2. Escape sequences
+
+>>> """This is 
+... a sample of 
+... multiline string"""
+'This is \na sample of \nmultiline string'
+>>>
+
+>>> m='This is\na sample of\nmultiline string'
+>>> ,
+  File "<stdin>", line 1
+    ,
+    ^
+SyntaxError: invalid syntax
+>>> m
+'This is\na sample of\nmultiline string'
+>>> print(m)
+This is
+a sample of
+multiline string
+>>>
+
+
 
 
