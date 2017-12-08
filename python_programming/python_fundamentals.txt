@@ -477,6 +477,174 @@ a sample of
 multiline string
 >>>
 
+Windows
+-------
+'\r\n'
+Carriage-return newline
+
+Linux/ UNIX
+-----------
+'\n'
+newline
+
+Python3 has universal newlines '\n'.
+
+PEP 278
+
+>>> "This is a use of \" escape sequence."
+'This is a use of " escape sequence.'
+
+>>> 'This is a another use of \' escape sequence.'
+"This is a another use of ' escape sequence."
+
+Raw Strings
+-----------
+>>> path = r'D:\Backups\Files\Programs'
+>>> path
+'D:\\Backups\\Files\\Programs'
+>>> print(path)
+D:\Backups\Files\Programs
+
+No Separate Character Type
+--------------------------
+'a long string'
+'s' 
+
+Both of these are str
+
+No separate character type "characters" are simply one element strings.
+
+>>> s='This is tes.'
+>>> s[4]
+' '
+>>> s[3]
+'s'
+>>> type(s[2])
+<class 'str'>
+>>> 
+
+>>> help(str)
+
+>>> c = 'kathmandu'
+>>> c.capitalize()
+'Kathmandu'
+>>>
 
 
+>>> c = 'kathmandu'
+>>> c.capitalize()
+'Kathmandu'
+>>> c
+'kathmandu'
+>>> 
 
+Note: capitalize() method does not change the original string c.
+
+Python Strings are Unicode.
+UTF-8.
+
+Source encoding: UTF-8 
+UTF-8 literals
+
+>>> 'Vi er s\u00e5 glad for \u00e5 h\u00f8re og'
+'Vi er så glad for å høre og'
+>>>
+
+>>> '\xe5'
+'å'
+
+>>> '\345'
+'å'
+
+Bytes
+-----
+immutable sequences of bytes
+
+Bytes are very similar to strings except that rather than being sequences of unicode codepoints, they are 
+sequences of well, bytes. As such, they are used for raw binary data and fixed with single byte character 
+encoding such as ASCII.
+
+Bytes Literals
+--------------
+b'data'
+b"data"
+
+>>> d=b'some bytes example'
+>>> d.split()
+[b'some', b'bytes', b'example']
+>>>
+
+Converting Between Strings and Bytes
+------------------------------------
+
+decode bytes => str
+encode str => bytes
+
+list
+----
+mutable sequences of objects
+Lists are the workhorse of Python data structures.
+
+List Literals
+-------------
+[a, b, c, d]
+
+>>> a = [30, 4, 9]
+>>> a
+[30, 4, 9]
+>>> f = ["apple", "grap", "pear", "orange"]
+>>> f
+['apple', 'grap', 'pear', 'orange']
+>>> f[1]
+'grap'
+>>> f[1]=90
+>>> f
+['apple', 90, 'pear', 'orange']
+>>>
+>>> l= []
+>>> l.append('sample')
+>>> l
+['sample']
+>>> l.append(90)
+>>> l
+['sample', 90]
+>>> list("sample")
+['s', 'a', 'm', 'p', 'l', 'e']
+>>>
+
+dict
+----
+mutable mappings of keys to values
+Dictionaries are completely fundamental to the way the Python language works and are very widely used.
+A dictionary maps keys to values and in some languages is known as an associate of array.
+
+Dict Literals
+-------------
+{k1 : v1, k2: v2}
+
+Each pair is separated by a comma, and each key is separated from the corresponding value by a colon.
+
+>>> d = {'alice': '901-897-3456', 'bob': '678-345-9021', 'eve': '254-098-3456'}
+>>> d['alice']
+'901-897-3456'
+>>> d['alice']='999-99-9999'
+>>> d
+{'alice': '999-99-9999', 'bob': '678-345-9021', 'eve': '254-098-3456'}
+>>>
+
+Adding a value in dictionary
+>>> d['charls']='455-009-9999'
+>>> d
+{'alice': '999-99-9999', 'bob': '678-345-9021', 'eve': '254-098-3456', 'charls': '455-009-9999'}
+>>>
+
+
+for-loop
+--------
+visit each item in an iterable series.
+
+For-Loop Syntax
+for item in iterable:
+    ...body...
+    
+    
