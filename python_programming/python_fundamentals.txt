@@ -375,7 +375,6 @@ Expression is converted to bool as if by the bool() constructor.
 2
 1
 >>>
-
 This works because the conversion of the integer value of y to bool results to True 
 until we get to zero, which converts to False.
 
