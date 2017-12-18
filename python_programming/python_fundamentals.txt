@@ -705,4 +705,12 @@ Modularity
 ==========
 about structure and organization
 modularity is an important property for anything but trivial software systems as it gives us the power to make self-contained,
-reusable 
+reusable pieces, which can be combined in new ways to solve different problems.
+
+As with most programming languages, the most fine-grained modularization facility is the definition of reusable functions.
+
+Collections of related functions are typically grouped into source code files called modules.
+
+
+
+
