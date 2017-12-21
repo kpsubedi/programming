@@ -49,3 +49,8 @@ doc = XML(data)
 for pt in doc.findall('.//pt'):
     print(pt.text)
 ==================
+$ python3 -i demo1v1.py 22 14787
+
+If there is a error in demo1v1.py -i will give us to access REPL. 
+To view the variables before the crash happened.
+
