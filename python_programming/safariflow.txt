@@ -54,3 +54,20 @@ $ python3 -i demo1v1.py 22 14787
 If there is a error in demo1v1.py -i will give us to access REPL. 
 To view the variables before the crash happened.
 
+programmer:from_safariflow python.programmer$ python3 demo1v1.py 22 14787
+4 MIN
+16 MIN
+25 MIN
+
+programmer:from_safariflow python.programmer$ python3 -i demo1v1.py 22 14787
+Traceback (most recent call last):
+  File "demo1v1.py", line 24, in <module>
+    print(pt.txt)
+AttributeError: 'xml.etree.ElementTree.Element' object has no attribute 'txt'
+>>> 
+
+>>> data
+b'<?xml version="1.0" encoding="UTF-8"?>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<stop>\r\n\r\n\t<id>14787</id> \r\n\t<rtpiFeedName></rtpiFeedName>\r\n\t<nm>Clark &amp; Balmoral</nm>\r\n\r\n\r\n\t<sri>\r\n\t\t<rt>22</rt> \r\n\t\t<rtRtpiFeedName></rtRtpiFeedName>\r\n\t\t<rd>22</rd>\t\t\r\n\t\t<d>Southbound</d> \r\n\t\t<dd>Southbound</dd>   \r\n\t\t<dRtpiFeedName></dRtpiFeedName>\r\n\t</sri>\r\n\r\n\t<sbs>\r\n\r\n\r\n\t</sbs>\r\n\t\r\n\r\n\t<cr>22</cr>\r\n\t<crRtpiFeedName></crRtpiFeedName>\r\n\r\n\t<pre>\r\n\r\n\t\t<pt>3 MIN</pt>\r\n\r\n\t\t<fd>Harrison</fd>\r\n\r\n\t\t<v>1720</v>\r\n\t\t<scheduled>false</scheduled>\t\t\r\n\r\n\t\t<rn>22</rn> \r\n\t\t<rd>22</rd> \t\t\r\n\r\n\t\t\r\n\t\t<m>1</m>\t\r\n\t\t<consist></consist>    \r\n\t\t<cars></cars> \r\n\t\t    \t\r\n\t</pre>\r\n\r\n\t<pre>\r\n\r\n\t\t<pt>15 MIN</pt>\r\n\r\n\t\t<fd>Harrison</fd>\r\n\r\n\t\t<v>1932</v>\r\n\t\t<scheduled>false</scheduled>\t\t\r\n\r\n\t\t<rn>22</rn> \r\n\t\t<rd>22</rd> \t\t\r\n\r\n\t\t\r\n\t\t<m>1</m>\t\r\n\t\t<consist></consist>    \r\n\t\t<cars></cars> \r\n\t\t    \t\r\n\t</pre>\r\n\r\n\t<pre>\r\n\r\n\t\t<pt>23 MIN</pt>\r\n\r\n\t\t<fd>Harrison</fd>\r\n\r\n\t\t<v>4370</v>\r\n\t\t<scheduled>false</scheduled>\t\t\r\n\r\n\t\t<rn>22</rn> \r\n\t\t<rd>22</rd> \t\t\r\n\r\n\t\t\r\n\t\t<m>1</m>\t\r\n\t\t<consist></consist>    \r\n\t\t<cars></cars> \r\n\t\t    \t\r\n\t</pre>\r\n\r\n\r\n</stop>\r\n'
+>>>
+
+
