@@ -90,3 +90,5 @@ Using Python Debugger
  26  	
 [EOF]
 (Pdb)
+(Pdb) quit
+>>>
