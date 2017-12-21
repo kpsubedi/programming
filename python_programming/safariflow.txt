@@ -23,7 +23,7 @@ Here is the changed in above program to make more generalized code.
 - Taking command argument using sys 
 - Make run without python3 
 
-
+=============
 #!/usr/bin/env python3
 import sys
 
@@ -48,3 +48,4 @@ doc = XML(data)
 
 for pt in doc.findall('.//pt'):
     print(pt.text)
+==================
