@@ -79,6 +79,14 @@ Using Python Debugger
 (Pdb) print(pt)
 <Element 'pt' at 0x102c73908>
 (Pdb)
-
-
-
+(Pdb) list
+ 19  	
+ 20  	from xml.etree.ElementTree import XML
+ 21  	doc = XML(data)
+ 22  	
+ 23  	for pt in doc.findall('.//pt'):
+ 24  ->	    print(pt.txt)
+ 25  	
+ 26  	
+[EOF]
+(Pdb)
