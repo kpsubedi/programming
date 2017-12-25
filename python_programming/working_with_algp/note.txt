@@ -1,0 +1,70 @@
+Problem Statement
+================
+
+1. Does a collection contain a specific element
+- Assume collection is structured as a Python list
+- Python has in statement for this purpose
+- What is expected performance of in?
+
+def contains(collection, target):
+    return target in collection
+
+
+Best/Average/Worst Case Analysis
+================================
+- Best case is when 1st element is target
+- Worst case you have to check each one
+- Average case
+  * If element is random one from list, then must check 1/2 of the elements; 
+    if not in list, must check each one
+- Can you do better? Yes!
+ * But only if you add structure the collection
+
+
+Why Contains Functionality Is Important
+=======================================
+- Fundamental functionality for a collection
+- Precursor for insert request
+ * In many situations you only want to insert a value if collection doesn't already contain it
+ * Let's approach in with this concern in mind
+
+    if value not in collection:
+        col.append(value)
+
+BINARYARRAYSEARCH Algorithm
+===========================
+
+- A phone book with n entries is sorted by last name (and first name within last name)
+ * Easy to locate a phone # for a given person
+ * Hard to locate a person for a given phone #
+- Observation on task difficulty
+ * Searching through a phone book with 400 pages is not twice as hard as with a 200-page 
+   phone book
+
+Algorithm Paseudocode
+=====================
+Assume A is sorted
+
+To search through A, this algorithm cuts the problem size in half with each pass through the while loop
+
+Divide problem into sub-problems half as large
+
+BINARYARRAYSEARCH
+---------------------------------
+Best Case ==> O(1)
+Average Case ==> O(log n)
+Worst Case ==> O( log n)
+
+search (A, t)
+low = 0
+high = n - 1
+while low <= high do
+    mid = (low + high) / 2
+    if t = A[mid] then
+       return true
+    else if t < A[mid] then
+        high = mid - 1
+    else
+        low = mid + 1
+return false
+end
