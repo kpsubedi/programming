@@ -1,3 +1,5 @@
+
+################################################
 # Binary Search template file
 from time import time
 
@@ -27,9 +29,11 @@ def performance():
         sorted = range(n)
         now = time()
         # Code whose performance is to be evaluated
+        # contains(sorted, -1)
         bs_contains(sorted, -1)
         done = time()
         print(n, (done-now)*1000)
         n = n * 2
 
 performance()
+#######################################
