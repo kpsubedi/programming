@@ -152,7 +152,7 @@ def performance():
         
 ####Binary Search Tree with remove node feature####
 ###################################################
-# Binary Search Tree Implementation
+# Binary Search Tree Implementation name of the file: bst_demo.py 
 class BinaryNode:
 
     def __init__(self, value = None):
@@ -254,4 +254,27 @@ def performance():
         bt.contains(random.randint(1,n))
         print ("%d, %f" % (n, (time() - now)*1000))
         n = n * 2
- #######################################################
+############################################################
+### Building Balanced Search Tree from sorted collection ###
+############################################################
+#!/usr/bin/env python3
+
+from bst_demo import BinaryTree
+
+
+def balanced_tree(ordered):
+    """ Create balanced binary tree from ordered collection"""
+    bt = BinaryTree()
+
+    add_range(bt, ordered, 0, len(ordered)-1)
+    return bt
+
+def add_range(bt, ordered, low, high):
+    """Add range to the bt in way that bt remains balanced"""
+    if low <= high:
+        mid = (low+high)//2
+        bt.add(ordered[mid])
+        add_range(bt, ordered, low, mid-1)
+        add_range(bt, ordered, mid+1, high)
+#####################################################
+
