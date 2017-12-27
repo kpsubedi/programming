@@ -277,4 +277,39 @@ def add_range(bt, ordered, low, high):
         add_range(bt, ordered, low, mid-1)
         add_range(bt, ordered, mid+1, high)
 #####################################################
+#!/usr/bin/env python3
+import random
+import time
 
+def get_performance_sort():
+    """Get performance"""
+    scores = {}
+    trial = 1
+    while trial <= 16:
+        numbers = [random.randint(1,9) for i in range(2**trial)]
+        now = time.clock()
+        numbers.sort()
+        done = time.clock()
+        scores[trial] = (done-now)
+        trial = trial + 1
+    for i in scores:
+        print("%d\t%f" %(2**i,scores[i]))
+        
+     
+def get_performance_sum():
+    """Calculating """
+    scores = {}
+    trial = 1
+    while trial <= 16:
+        numbers = [random.randint(1,9) for i in range(2**trial)]
+        now = time.clock()
+        sum = 0
+        for d in numbers:
+            sum = sum + d
+        done = time.clock()
+        scores[trial] = (done-now)
+        trial = trial + 1
+    for i in scores:
+        print("%d\t%f" %(2**i,scores[i]))
+    
+##############################
