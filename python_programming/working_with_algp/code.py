@@ -514,3 +514,168 @@ def trial_table_mat():
         print("%d\t%f\t%f" %(trial, result[0], result[1]))
         trial = trial * 2
 ##################
+# Mathematical Algorithms
+from time import time
+def exponent(x, n):
+    """Returns the value of x raised nth power"""
+    if n == 0:
+        return 1
+    if n == 1:
+        return x
+    if n % 2:
+        return x * exponent(x*x, (n-1)//2)
+    return exponent(x*x, n//2)
+def exponent_nore(x, n):
+    """Non-recursive implementation of exponentiation"""
+    if n == 0:
+        return 1
+    if n == 1:
+        return x
+    val = 1
+    while n > 0:
+        if n % 2:
+            val = val * x
+            n = n -1
+        n = n // 2
+        if n > 0:
+            x = x * x
+    return val
+
+def compare_trials_nonr(trials):
+    """Compare performance on a number of runs"""
+    base = 999
+    timeN = timeR = 0
+
+    for t in range(trials):
+        now = time()
+        check1 = exponent(base, t)
+        timeR = timeR + (time() - now)
+
+        now = time()
+        check2 = exponent_nore(base, t)
+        timeN = timeN + (time() - now)
+
+        if check1 != check2:
+            raise Exception ("Invalid Result")
+    return (timeR, timeN)
+
+def trial_table_nonr():
+    """Output table of results for comparing nonr vs recursive"""
+    trial = 2
+    while trial <= 2048:
+        result = compare_trials_nonr(trial)
+        print("%d\t%f\t%f" %(trial, result[0], result[1]))
+        trial = trial * 2
+        
+
+        
+def exponent_mod(x, n, m):
+    """Returns the value of x raised nth power"""
+    if n == 0:
+        return 1
+    if n == 1:
+        return x % m
+    if n % 2:
+        return x * exponent_mod(x*x % m, (n-1)//2, m) % m
+    return exponent_mod(x*x, n//2, m) % m
+
+
+def compare_trials(trials):
+    """Compare performance on a number of runs"""
+    base = 999
+    timeN = timeR = 0
+
+    for t in range(trials):
+        now = time()
+        check1 = exponent(base, t)
+        timeR = timeR + (time() - now)
+
+        now = time()
+        check2 = base ** t
+        #for i in range(t):
+        #    check2 = check2 * base
+        timeN = timeN + (time() - now)
+
+        if check1 != check2:
+            raise Exception ("Invalid Result")
+    return (timeR, timeN)
+
+
+def compare_trials_mod(trials):
+    """Compare performance on a number of runs"""
+    base = 999
+    mod = 17
+    timeN = timeR = 0
+
+    for t in range(trials):
+        now = time()
+        check1 = exponent_mod(base, t, mod)
+        timeR = timeR + (time() - now)
+
+        now = time()
+        check2 = pow(base, t, mod)
+        #for i in range(t):
+        #    check2 = check2 * base
+        timeN = timeN + (time() - now)
+
+        if check1 != check2:
+            raise Exception ("Invalid Result")
+    return (timeR, timeN)
+
+def trial_table():
+    """Output table of results for comparison"""
+    trial = 2
+    while trial <= 2048:
+        #result = compare_trials(trial)
+        result = compare_trials_mod(trial)
+        print("%d\t%f\t%f" %(trial, result[0], result[1]))
+        trial = trial * 2
+        
+import numpy
+import random
+
+def random_matrix(n):
+    """Return a random nxn Matrix"""
+    r = []
+    for i in range(n):
+        r.append([random.random() for i in range(n)])
+    base = numpy.array(r).reshape(n,n)
+    return base
+
+def exponent_mat(x, n):
+    """Returns the value of x raised nth power"""
+    if n == 0:
+        return numpy.identity(len(x))
+    if n == 1:
+        return x
+    if n % 2:
+        return x.dot(exponent_mat (x.dot(x), (n-1)//2))
+    return exponent_mat(x.dot(x), n//2)
+
+def compare_trials_mod_mat(trials, size):
+    """Compare performance on a number of runs"""
+    base = random_matrix(size)
+    mod = 17
+    timeN = timeR = 0
+
+    for t in range(trials):
+        now = time()
+        check1 = exponent_mat(base, t)
+        timeR = timeR + (time() - now)
+
+        now = time()
+        check2 = numpy.identity(len(base))
+        for i in range(t):
+            check2 = check2.dot(base)
+        timeN = timeN + (time() - now)
+
+    return (timeR, timeN)
+
+def trial_table_mat():
+    """Output table of results for comparison"""
+    trial = 2
+    size = 33
+    while trial <= 512: 
+        result = compare_trials_mod_mat(trial, size)
+        print("%d\t%f\t%f" %(trial, result[0], result[1]))
+        trial = trial * 2
