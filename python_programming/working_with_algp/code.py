@@ -771,3 +771,12 @@ def solve_specific(board):
         print(move)
         
 ###################
+##
+###################
+>>> import math
+>>> math.factorial(9)
+362880
+>>> math.factorial(16)
+20922789888000
+>>> 
+####
