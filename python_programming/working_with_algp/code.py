@@ -780,3 +780,93 @@ def solve_specific(board):
 20922789888000
 >>> 
 ####
+# Magic Square Construction
+
+board = []
+used = []
+magic_sum = [0]
+
+def initialize(n):
+    """Initila Board Setup"""
+    del board[0:len(board)]
+    del used[0:len(used)]
+    for r in range(n):
+        board.append([0 for c in range(n)])
+    for d in range(n*n+1):
+        used.append(False)
+    magic_sum[0] = n*(n*n+1)//2
+
+def output():
+    """Output Board"""
+    for row in board:
+        for val in row:
+            print("{:2d}".format(val)),
+        print
+
+def is_valid(n):
+    """Determine if board is valid"""
+    sum_d1 = sum_d2 = 0
+    for i in range(n):
+        sum_r = sum_c = 0
+        sum_d1 = sum_d1 + board[i][i]
+        sum_d2 = sum_d2 + board[i][n-i-1]
+
+        for j in range(n):
+            sum_r = sum_r + board[i][j]
+            sum_c = sum_c + board[j][i]
+
+        if sum_r != magic_sum[0] or sum_c != magic_sum[0]:
+            return False
+    return sum_d1 == magic_sum[0] and sum_d2 == magic_sum[0]
+
+def solve(n, step=0):
+    """Complete given step in magic squre board"""
+    if step == n**2:
+        return is_valid(n)
+    for val in range(1, n**2+1):
+        if not used[val]:
+            used[val] = True
+            board[step//n][step%n] = val
+            if solve(n, step+1):
+                return True
+            board[step//n][step%n] = 0
+            used[val] = False
+    return False        
+# Use this existing solution for 3x3 and it works great. Use for 4x4 and
+# it takes several minutes to come back with the solution. This brute
+# force technique is trying 16! = 20,922,789,888,000 possible solutions.
+# This roughly is 5,765, 760 times more work than solving the 3x3. Can we
+# find a way to do better? YES!
+# Instead of blindly pursuing each recursive step, you can validate partial
+# results before moving forward.
+# Revise as shown:
+
+def valid_upto(n, step):
+    """Determine if valid so far"""
+    for r in range(n):
+        if step == (r+1)*n-1:
+            return sum(board[r]) == magic_sum[0]
+    for c in range(n):
+        if step == n*(n-1)+c:
+            total = 0
+            for r in range(n):
+                total = total + board[r][c]
+            return total == magic_sum[0]
+    return True
+
+def solve_it(n, step=0):
+    """Complete given step in magic square board"""
+    if step == n**2:
+        return is_valid(n)
+    for val in range(1,n**2+1):
+        if not used[val]:
+            used[val] = True
+            board[step//n][step%n] = val
+            if valid_upto(n,step) and solve_it(n, step+1):
+                return True
+            board[step//n][step%n] = 0
+            used[val] = False
+    return False
+
+# Note that this won't work for 5x5 since that is even more computationally
+# expensive!
