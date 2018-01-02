@@ -870,3 +870,97 @@ def solve_it(n, step=0):
 
 # Note that this won't work for 5x5 since that is even more computationally
 # expensive!
+# KD-tree Implementation
+max_value = 2147483647
+min_value = -2147483648
+
+HORIZONTAL = 0
+VERTICAL   = 1
+
+X_ = 0
+Y_ = 1
+
+class Region:
+    """Represents region in Cartesian space"""
+    def __init__(self, xmin, ymin, xmax, ymax):
+        """Creates region from (xmin, ymin) to (xmax, ymax)"""
+        self.x_min = xmin
+        self.y_min = ymin
+        self.x_max = xmax
+        self.y_max = ymax
+
+    def copy(self):
+        """Return copy of region"""
+        return Region(self.x_min, self.y_min, self.x_max, self.y_max)
+
+# default maximum region
+max_region = Region(min_value, min_value, max_value, max_value)
+
+    
+class KDNode:
+
+    def __init__(self, pt, orient, region = max_region):
+        """Create empty KDNode"""
+        self.point = pt
+        self.orient = orient
+        self.above = None
+        self.below = None
+        self.region = region
+
+    def create_child(self, pt, below):
+        """Create child node (either above or below) given node with pt"""
+        r = self.region.copy()
+        if self.orient == VERTICAL:
+            if below:
+                r.x_max = self.point[X_]
+            else:
+                r.x_min = self.point[X_]
+        else:
+            if below:
+                r.y_max = self.point[Y_]
+            else:
+                r.y_min = self.point[Y_]
+        return KDNode(pt, 1-self.orient, r)        
+            
+    def is_below(self, pt):
+        """Is point below current node"""
+        if self.orient == VERTICAL:
+            return pt[X_] < self.point[X_]
+        return pt[Y_] < self.point[Y_]
+    
+        
+        
+            
+    def add(self, pt):
+        """Add point to the KDNode tree rooted at this node"""
+        if self.point == pt:
+            return
+        if self.is_below(pt):
+            if self.below:
+                self.below.add(pt)
+            else:
+                self.below = self.create_child(pt, True)
+        else:
+            if self.above:
+                self.above.add(pt)
+            else:
+                self.above = self.create_child(pt, False)
+                
+                
+                
+        
+class KDTree:
+
+    def __init__(self):
+        """Create empty KD Tree"""
+        self.root = None
+
+    def add(self, pt):
+        """Add Point to KD-tree"""
+
+        if self.root:
+            self.root.add(pt)
+        else:
+            self.root = KDNode(pt, VERTICAL)
+            
+ ####
