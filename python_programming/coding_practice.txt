@@ -1,0 +1,32 @@
+================
+https://www.geeksforgeeks.org/split-array-two-equal-sum-subarrays/
+------
+Split an array into two equal Sum subarrays
+-------------------------------------------
+def array_partition(a1):
+    
+    sum1 = 0
+    for i in range(0,len(a1)):
+        sum1 = sum1 + a1[i]
+       
+        
+    sum2 = 0
+    for j in range(0,len(a1)):
+        sum2 = sum2 + a1[-1-j]
+        
+        sum1 = sum1 - a1[-1-j]
+        
+        if sum1 == sum2:
+            return j
+        
+    return -1
+
+
+a1 = [1,10,5,1,5]
+
+val = array_partition(a1)
+print val
+
+print a1[0:len(a1)-val-1]
+print a1[len(a1)-val-1:len(a1)]
+==============================
