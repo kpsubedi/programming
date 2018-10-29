@@ -1,5 +1,7 @@
 https://github.com/angrave/SystemProgramming/wiki
 https://cs-education.github.io/sys/#/lessons: Video Lecture
+http://cs-education.github.io/sys/#/lessons
+
 http://man7.org/index.html
 
 
