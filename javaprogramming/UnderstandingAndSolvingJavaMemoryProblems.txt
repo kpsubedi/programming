@@ -1,0 +1,10 @@
+
+[Heap Dump]
+
+bash-4.2$ jps
+11156 JShellToolProvider
+11176 RemoteExecutionControl
+15515 Jps
+bash-4.2$ jmap -dump:file=example.hprof 11156
+Dumping heap to /home/null/example.hprof ...
+Heap dump file created [51418245 bytes in 0.212 secs]
