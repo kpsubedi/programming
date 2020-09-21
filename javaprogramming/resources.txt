@@ -1,2 +1,5 @@
 https://github.com/in28minutes/spring-unit-testing-with-junit-and-mockito
 https://docs.spring.io/spring/docs/current/spring-framework-reference/pdf/
+
+[Interview-Resources]
+https://intellipaat.com/blog/interview-question/java-interview-questions/?utm_source=linkedin&utm_medium=organic&utm_campaign=posting#7
