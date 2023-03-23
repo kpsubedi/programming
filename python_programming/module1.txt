@@ -1,1 +1,5 @@
-Getting Started
+[Getting Started]
+- In this module we are going to cover Python installation on your system for: Windows, Linux, and MacOS.
+
+[[ Obtaining and installing Python ]]
+- There are two major versions of the Python language: Python 2 and Python 3
