@@ -417,10 +417,10 @@ from module import function as alias
 
 Collections
 ===========
-str
-bytes
-list
-dict
+str - immutable strings of Unicode code points
+bytes - immutable strings of bytes
+list - mutable sequences of objects
+dict - mutable mappings from keys to values
 
 str
 ---
