@@ -3,3 +3,5 @@
 
 [[ Obtaining and installing Python ]]
 - There are two major versions of the Python language: Python 2 and Python 3
+- Download page (https://www.python.org/downloads/)
+
