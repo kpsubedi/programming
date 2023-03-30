@@ -1,1 +1,5 @@
 [Virtual Environments]
+
+- A virtual environement is a light-weight, self-contained Python Installation. 
+- [1] The main motivation for virtual environments is to allow different projects to have control over the versions of installed Python packages, without interfering with other Python projects installed on the same host.
+- [2] 
