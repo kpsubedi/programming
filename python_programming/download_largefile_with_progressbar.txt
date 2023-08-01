@@ -1,0 +1,27 @@
+# Download large file in Python with beautiful progress bar
+
+  import requests
+  import tqdm
+
+
+  def download(url: str, filename: str):
+      with open(filename, 'wb') as f:
+          with requests.get(url, stream=True) as r:
+              r.raise_for_status()
+              total = int(r.headers.get('content-length', 0))
+
+              tqdm_params = {
+                  'desc': url,
+                  'total': total,
+                  'miniters': 1, 
+                  'unit': 'B',
+                  'unit_scale': True,
+                  'unit_divisor': 1024,
+                }
+                with tqdm.tqdm(**tqdm_params) as pb:
+                    for chunk in r.iter_content(chunk_size=8192):
+                        pd.update(len(chunk))
+                        f.write(chunk)
+# Call the above function
+download('https://speed.hetzner.de/100MB.bin', '100MB.bin')
+                      
