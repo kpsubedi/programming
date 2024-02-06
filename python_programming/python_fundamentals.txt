@@ -700,6 +700,58 @@ To get a list of strings, we should decode the byte of stream in each line into 
 >>> story_words
 ['It', 'was', 'the', 'best', 'of', 'times', 'it', 'was', 'the', 'worst', 'of', 'times', 'it', 'was', 'the', 'age', 'of', 'wisdom', 'it', 'was', 'the', 'age', 'of', 'foolishness', 'it', 'was', 'the', 'epoch', 'of', 'belief', 'it', 'was', 'the', 'epoch', 'of', 'incredulity', 'it', 'was', 'the', 'season', 'of', 'Light', 'it', 'was', 'the', 'season', 'of', 'Darkness', 'it', 'was', 'the', 'spring', 'of', 'hope', 'it', 'was', 'the', 'winter', 'of', 'despair', 'we', 'had', 'everything', 'before', 'us', 'we', 'had', 'nothing', 'before', 'us', 'we', 'were', 'all', 'going', 'direct', 'to', 'Heaven', 'we', 'were', 'all', 'going', 'direct', 'the', 'other', 'way', 'in', 'short', 'the', 'period', 'was', 'so', 'far', 'like', 'the', 'present', 'period', 'that', 'some', 'of', 'its', 'noisiest', 'authorities', 'insisted', 'on', 'its', 'being', 'received', 'for', 'good', 'or', 'for', 'evil', 'in', 'the', 'superlative', 'degree', 'of', 'comparison', 'only']
 >>>
+==== Loop More Examples ====
+
+
+from urllib.request import urlopen
+
+with urlopen('http://sixty-north.com/c/t.txt') as story:
+    story_words = []
+    for line in story:
+        line_words = line.decode('utf-8').split()
+        for word in line_words:
+            story_words.append(word)
+
+    print(story_words)
+
+####
+
+user_input = ''
+names = []
+while user_input.lower() != 'done':
+    user_input = input('Enter a name, or done to exit: ')
+    if user_input.lower() != 'done':
+        names.append(user_input)
+
+print(names)
+
+################
+
+user_input = ''
+names = []
+
+while user_input.lower() != 'done':
+    if user_input:
+      names.append(user_input)
+
+    user_input = input('Enter a name, or done to exit: ')
+
+print(names)
+
+###############
+rainfall = {
+    'october': 3.5,
+    'november': 4.2,
+    'december': 2.1
+}
+
+for key in rainfall.keys():
+    print(f'{key}: {rainfall[key]}cm')
+########
+
+for i in range(0,5,3):
+    print(i)
+##########
 
 Modularity
 ==========
