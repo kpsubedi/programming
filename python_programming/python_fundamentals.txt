@@ -771,4 +771,6 @@ open() https://docs.python.org/3/library/functions.html#open
 
 - Reading and writing files is a crucial part of what many real-world applications do. 
 - The notion of a file, however, is somewhat abstract. 
+- In some cases a file might mean collection of bytes on a hard disk. 
+
 
