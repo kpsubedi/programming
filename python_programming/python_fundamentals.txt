@@ -764,3 +764,11 @@ As with most programming languages, the most fine-grained modularization facilit
 Collections of related functions are typically grouped into source code files called modules.
 -
 
+
+Files and Resource Management
+=============================
+open() https://docs.python.org/3/library/functions.html#open
+
+- Reading and writing files is a crucial part of what many real-world applications do. 
+- The notion of a file, however, is somewhat abstract. 
+
