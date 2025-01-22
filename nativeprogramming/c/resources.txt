@@ -1,0 +1,2 @@
+[Resources]
+https://www.edgedb.com/blog/c-stdlib-isn-t-threadsafe-and-even-safe-rust-didn-t-save-us
