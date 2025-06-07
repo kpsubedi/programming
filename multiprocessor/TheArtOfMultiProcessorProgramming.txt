@@ -38,7 +38,8 @@ Chapter 1
 ---------
 - At the dawn of the twenty-first century, the computer industry underwent yet another revolution. 
 The major chip manufacturers had increasingly been unable to make processor chips both smaller and faster. 
-As Moore's law approached the end of its 50-year reign, manufacturers turned to "multicore" architectures, in which multiple processors (cores) on a single chip communicate directly through shared hardware caches. 
+As Moore's law approached the end of its 50-year reign, manufacturers turned to "multicore" architectures, 
+in which multiple processors (cores) on a single chip communicate directly through shared hardware caches. 
 Multicore chips make computing more effective by exploiting parallelism: harnessing multiple circuits to work on a single task.
 
 - The spread of multiprocessor architectures has had a pervasive effect on how we develop 
