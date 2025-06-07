@@ -1,3 +1,39 @@
 https://cs.ipm.ac.ir/asoc2016/Resources/Theartofmulticore.pdf
 
+Organization
+============
+- The first part of this book covers the principles of concurrent programming, showing 
+* how to think as a concurrent programmer,
+* developing fundamental skills such as understanding when operations "happen", 
+* considering all possible interleavings, and 
+* identifying impediments to progress. 
+
+Chapter 2
+---------
+- we look at the classic mutual exclusion problem. 
+- essential for understanding why concurrent programming is a challenge.
+- it covers basic concepts such as fairness and deadlock. 
+
+Chapter 3
+---------
+- what it means for a concurrent program to be correct. 
+
+
+- The second part of the book describes the practice of concurrent programming. 
+- Each chapter has a secondary theme, illustrating either a 
+* particular programming pattern or 
+* an algorithmic technique. 
+
+Concurrent Data Structures
+--------------------------
+- Linked Lists, which illustrate different kinds of synchronization patterns, from coarse-grained locking to fine-grained locking to lock-free structures
+- First-in-first-out (FIFO) queues illustrate the "ABA problem" that arises when using atomic synchronization primitives
+- Stacks illustrate an important synchronization pattern called elimination
+- hash maps show how an algorithm can exploit natural parallelism
+- skip lists illustrate efficient parallel search
+- prioprity queues illustrate how one can sometimes relax correctness guarantees to enhance performance 
+
+
+
+
 
