@@ -45,6 +45,8 @@ Multicore chips make computing more effective by exploiting parallelism: harness
 - The spread of multiprocessor architectures has had a pervasive effect on how we develop 
 software. 
 During the twentieth century, advances in technology brought regular increases in clock speed, so software would effectively "speed up" by itself over time.
-
+In this century, however, that "free ride" has come to an end. Today, advances in technology 
+bring regular increases in parallelism, but only minor increases in clock speed. 
+Exploiting that parallelism in one of the outstanding challenges of modern computer science. 
 
 
